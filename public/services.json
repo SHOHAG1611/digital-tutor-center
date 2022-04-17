@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "subject": "Math",
+        "price": 1500,
+        "img": "https://thumbs.dreamstime.com/b/smiling-math-teacher-holding-books-pointing-to-blackboard-female-171097946.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "workHour": "1hrs"
+    },
+    {
+        "id": 2,
+        "subject": "English",
+        "price": 1500,
+        "img": "https://img.lovepik.com/photo/50081/9970.jpg_wh860.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "workHour": "1hrs"
+    },
+    {
+        "id": 3,
+        "subject": "Science",
+        "price": 2000,
+        "img": "https://img.freepik.com/free-photo/pleased-young-female-teacher-wearing-glasses-sits-table-with-school-tools-holding-book-classroom_141793-105441.jpg?size=626&ext=jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "workHour": "1hrs"
+    }
+]
