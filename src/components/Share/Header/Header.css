@@ -1,0 +1,17 @@
+.header-style a{
+    text-decoration: none;
+    justify-content: space-between;
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+
+}
+.header-style a:hover{
+    color: yellow;
+}
+.header-style{
+    background-color: rgb(211, 17, 124);
+    color: whitesmoke;
+    padding: 15px;
+    display: flex;
+}
