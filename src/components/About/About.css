@@ -1,0 +1,15 @@
+.my-info{
+    height: 200px;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+}
+.my-info .my-moto{
+    font-size: 25px;
+    color: yellow;
+
+}
