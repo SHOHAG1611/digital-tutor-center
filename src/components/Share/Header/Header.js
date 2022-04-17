@@ -5,6 +5,7 @@ const Header = () => {
     return (
    <nav className='header-style d-flex justify-content-around'>
        <CustomLink to='/'>Home</CustomLink>
+       <CustomLink to='/chekout'>CheckOut</CustomLink>
        <CustomLink to='/blogs'>Blogs</CustomLink>
        <CustomLink to='/about'>About</CustomLink>
        <CustomLink to='/login'>Login</CustomLink>
