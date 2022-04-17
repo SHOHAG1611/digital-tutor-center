@@ -11,7 +11,7 @@ const Banar = () => {
             <Carousel>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 height"
+                        className="d-block w-100"
                         src={benar1}
                         alt="First slide"
                     />

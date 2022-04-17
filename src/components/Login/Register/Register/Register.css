@@ -1,0 +1,9 @@
+.form-togol a{
+    text-decoration: none;
+    color: yellow;
+}
+.another-option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

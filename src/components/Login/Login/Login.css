@@ -1,0 +1,20 @@
+.form-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    border-radius: 30px;
+}
+.form-container img{
+    width: 33px;
+}
+.form-input{
+    height: 55px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+}
+.form-togol a{
+    text-decoration: none;
+    color: yellow;
+}
