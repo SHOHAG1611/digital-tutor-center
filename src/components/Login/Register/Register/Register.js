@@ -5,13 +5,14 @@ import auth from '../../../../firebase.init';
 import './Register.css'
 import Google from '../../Google/Google';
 
+
 const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
 
 
     const navigate=useNavigate();
@@ -22,7 +23,7 @@ const Register = () => {
     const submitHandle=event=>{
         event.preventDefault();
         // console.log(event.target.email.value)
-        const name=event.target.name.value;
+        // const name=event.target.name.value;
         const email=event.target.email.value;
         const password=event.target.password.value;
         createUserWithEmailAndPassword(email,password)
@@ -30,6 +31,12 @@ const Register = () => {
     if(user){
         navigate('/checkout')
     }
+
+      //error massage 
+      let errorMassage;
+      if (error) {
+             errorMassage=<p>Error: {error?.message}</p>
+        }
     return (
         <div className='container mx-auto form-container bg-info mt-5 mb-5 p-2'>
             <form onSubmit={submitHandle}>
@@ -46,6 +53,7 @@ const Register = () => {
                 <input className='form-input' type="password" name="password" id="" placeholder='Password' />
                 <br />
                 <p>already have a acount? <Link to='/login' onClick={goingToLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link></p>
+                {errorMassage}
                 <input  className='btn btn-primary mt-2 mx-auto w-100 rounded-pill' type="submit" value="Register" />
                 <Google></Google>
             </form>
