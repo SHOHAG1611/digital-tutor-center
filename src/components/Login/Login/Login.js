@@ -1,22 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import googleLogo from '../../img/google/google.png'
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Login = () => {
+    const emailUseRef = useRef('');
+    const passUseRef = useRef('');
+    const  navigate=useNavigate()
+    const location=useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+
+      if(user){
+        navigate(from, { replace: true });
+      }
+    const submitHandle=event=>{
+        event.preventDefault();
+        const email=emailUseRef.current.value;
+        const password=passUseRef.current.value;
+        // console.log(password,email)
+        signInWithEmailAndPassword(email,password)
+    }
+
+    const goingToRegister=event=>{
+        navigate('/register')
+    }
     return (
         <div className='container mx-auto form-container bg-info mt-5 mb-5 p-5'>
-            <form>
+            <form onSubmit={submitHandle}>
                 <label className='mb-2 ps-2' htmlFor="email">Email</label>
                 <br />
-                <input className='form-input' type="email" name="email" id="" placeholder='enter your email' />
+                <input className='form-input' ref={emailUseRef} type="email" name="email" id="" placeholder='enter your email' required/>
                 <br />
                 <label className='mb-2 ps-2' htmlFor="password">Password</label>
                 <br />
-                <input className='form-input' type="password" name="" id="" placeholder='Password' />
+                <input className='form-input' ref={passUseRef} type="password" name="" id="" placeholder='Password' required />
                 <br />
-                <p>create a acount <span className='form-togol'><Link to='/register'>Please Register</Link></span></p>
-                <button className='btn btn-primary mt-5 mx-auto w-100 rounded-pill'>Login</button>
+                <p>create a acount <Link to='/register' onClick={goingToRegister} className='text-danger pe-auto text-decoration-none' >Please Register</Link></p>
+                <input className='btn btn-primary mt-2 mx-auto w-100 rounded-pill' type="submit" value="Login" />
                 <div className='another-option text-white'>
                     <div>
                         <p>_________________</p>
@@ -25,59 +54,16 @@ const Login = () => {
                         <p className='mt-2 mx-2'>Or</p>
                     </div>
                     <div>
+
                         <p>_________________</p>
                     </div>
                 </div>
-                <button className='btn btn-primary mt-2 mx-auto w-100 rounded-pill'>
+                <button className='btn btn-success mt-2 mx-auto w-100 rounded-pill'>
                     <img src={googleLogo} alt="" />
                     login with google </button>
             </form>
         </div>
     );
 };
-
 export default Login;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <form>
-<div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-</div>
-<div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
-</div>
-<button type="submit" class="btn btn-primary">Submit</button>
-</form> */}
+// {/* <button className='btn btn-primary mt-2 mx-auto w-100 rounded-pill'>Login</button> */}

@@ -4,6 +4,8 @@
     display: flex;
     border: none;
     border-radius: 30px;
+    height: 500px;
+    width: 500px;
 }
 .form-container img{
     width: 33px;

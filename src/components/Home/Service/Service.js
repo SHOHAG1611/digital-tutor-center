@@ -11,7 +11,7 @@ const Service = ({service}) => {
             <h6>price: {price}</h6>
             <p><small>{description}</small></p>
             <h4>Work Hour: {workHour}</h4>
-            <Link to='/chekout'><button className='btn btn-info'>Enroll Now</button></Link>
+            <Link to='/checkout'><button className='btn btn-info'>Enroll Now</button></Link>
         </div>
     );
 };
