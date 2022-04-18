@@ -5,12 +5,10 @@ import auth from '../../../../firebase.init';
 import './Register.css'
 import Google from '../../Google/Google';
 
-
 const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
 
@@ -22,12 +20,11 @@ const Register = () => {
 
     const submitHandle=event=>{
         event.preventDefault();
-        // console.log(event.target.email.value)
-        // const name=event.target.name.value;
         const email=event.target.email.value;
         const password=event.target.password.value;
         createUserWithEmailAndPassword(email,password)
     }
+
     if(user){
         navigate('/checkout')
     }

@@ -29,24 +29,25 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+    // sign in with google
     const submitHandle = event => {
         event.preventDefault();
         const email = emailUseRef.current.value;
         const password = passUseRef.current.value;
-        // console.log(password,email)
         signInWithEmailAndPassword(email, password)
     }
     const goingToRegister = event => {
         navigate('/register')
     }
+
     // reset password
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
-    const updatePass = async() => {
+    const updatePass = async () => {
         const email = emailUseRef.current.value;
-  if(email){
-    await sendPasswordResetEmail(email);
-    toast('Sent email');
-  }
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
     }
     return (
         <div className='container mx-auto form-container bg-info mt-5 mb-5 p-5'>
@@ -70,4 +71,3 @@ const Login = () => {
     );
 };
 export default Login;
-// {/* <button className='btn btn-primary mt-2 mx-auto w-100 rounded-pill'>Login</button> */}

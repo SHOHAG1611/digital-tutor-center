@@ -13,7 +13,6 @@ const Google = () => {
       if(user){
           navigate('/checkout')
       }
-
     return (
         <div>
             <div className='another-option text-white'>
@@ -28,7 +27,6 @@ const Google = () => {
                 </div>
             </div>
             <div>
-                {/* <p className='text-danger'>error: {error?.message}</p> */}
                 {errorMassage}
             </div>
             <button onClick={()=>signInWithGoogle()} className='btn btn-success mt-2 mx-auto w-100 rounded-pill'>

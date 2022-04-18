@@ -8,7 +8,6 @@ const Blogs = () => {
                 <h4>1.Question: difference between authorization and authentication</h4>
                 <h3>Ans: 
                     While authentication and authorization are often used interchangeably, they are separate processes used to protect an organization from cyber-attacks. As data breaches continue to escalate in both frequency and scope, authentication and authorization are the first line of defense to prevent confidential data from falling into the wrong hands. As a result, strong authentication and authorization methods should be a critical part of every organizations overall security strategy.
-
                 </h3>
             </div>
             <div className='question-ans shadow p-3 mb-5 bg-white '>
