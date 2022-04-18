@@ -10,7 +10,7 @@ const Service = ({service}) => {
             <h3>Subject: {subject}</h3>
             <h6>price: {price}</h6>
             <p><small>{description}</small></p>
-            <h4>Work Hour: {workHour}</h4>
+            <h4>Teaching Time: {workHour}</h4>
             <Link to='/checkout'><button className='btn btn-info'>Enroll Now</button></Link>
         </div>
     );

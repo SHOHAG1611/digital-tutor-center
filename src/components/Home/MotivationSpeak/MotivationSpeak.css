@@ -1,0 +1,17 @@
+.aboutCenter {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutCenter img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    border: none;
+}
+.motivate{
+    margin-bottom: 10px;
+}
