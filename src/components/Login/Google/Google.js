@@ -33,7 +33,7 @@ const Google = () => {
             </div>
             <button onClick={()=>signInWithGoogle()} className='btn btn-success mt-2 mx-auto w-100 rounded-pill'>
                 <img src={googleLogo} alt="" />
-                login with google </button>
+                Continue with google </button>
         </div>
     );
 };

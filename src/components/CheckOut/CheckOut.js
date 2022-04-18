@@ -1,9 +1,11 @@
 import React from 'react';
+import welcomeStudent from '../img/welcome/welcome.jpg'
+import './CheckOut.css'
 
 const CheckOut = () => {
     return (
-        <div>
-            <h1>this is Welcome hehehe</h1>
+        <div className='container checkout-style text-center'>
+            <img className='' src={welcomeStudent} alt="" />
         </div>
     );
 };

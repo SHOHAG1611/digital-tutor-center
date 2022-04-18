@@ -1,0 +1,11 @@
+.checkout-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.checkout-style img{
+    width: 500px;
+    height: 500px;
+}

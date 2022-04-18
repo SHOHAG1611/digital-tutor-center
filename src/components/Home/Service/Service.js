@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({service}) => {
-    const {id,price,img,description,subject,workHour}=service;
+    const {price,img,description,subject,workHour}=service;
     return (
         <div className='single-service text-center shadow p-3 mb-5 bg-white '>
             <img src={img} alt="" />
