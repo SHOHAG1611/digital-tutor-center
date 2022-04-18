@@ -39,15 +39,15 @@ const Register = () => {
             <form onSubmit={submitHandle}>
                 <label className='mb-2 ps-2' htmlFor="name">Name</label>
                 <br />
-                <input className='form-input' type="text" name="name" id="" placeholder='Enter Your Name' />
+                <input className='form-input' type="text" name="name" id="" placeholder='Enter Your Name' required/>
                 <br />
                 <label className='mb-2 ps-2' htmlFor="email">Email</label>
                 <br />
-                <input className='form-input' type="email" name="email" id="" placeholder='Enter your email' />
+                <input className='form-input' type="email" name="email" id="" placeholder='Enter your email' required/>
                 <br />
                 <label className='mb-2 ps-2' htmlFor="password">Password</label>
                 <br />
-                <input className='form-input' type="password" name="password" id="" placeholder='Password' />
+                <input className='form-input' type="password" name="password" id="" placeholder='Password' required/>
                 <br />
                 <p>already have a account? <Link to='/login' onClick={goingToLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link></p>
                 {errorMassage}
