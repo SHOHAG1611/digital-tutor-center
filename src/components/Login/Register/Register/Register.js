@@ -49,7 +49,7 @@ const Register = () => {
                 <br />
                 <input className='form-input' type="password" name="password" id="" placeholder='Password' />
                 <br />
-                <p>already have a acount? <Link to='/login' onClick={goingToLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link></p>
+                <p>already have a account? <Link to='/login' onClick={goingToLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link></p>
                 {errorMassage}
                 <input  className='btn btn-primary mt-2 mx-auto w-100 rounded-pill' type="submit" value="Register" />
                 <Google></Google>
