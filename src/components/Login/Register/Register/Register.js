@@ -32,7 +32,7 @@ const Register = () => {
       //error massage 
       let errorMassage;
       if (error) {
-             errorMassage=<p>Error: {error?.message}</p>
+             errorMassage=<p>{error?.message}</p>
         }
     return (
         <div className='container mx-auto form-container bg-info mt-5 mb-5 p-2'>

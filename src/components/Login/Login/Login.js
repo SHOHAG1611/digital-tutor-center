@@ -24,7 +24,7 @@ const Login = () => {
     //error massage 
     let errorMassage;
     if (error) {
-        errorMassage = <p>Error: {error?.message}</p>
+        errorMassage = <p>{error?.message}</p>
     }
     if (user) {
         navigate(from, { replace: true });
