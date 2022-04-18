@@ -18,7 +18,7 @@ const Header = () => {
        <CustomLink to='/about'>About</CustomLink>
        {
            user?
-           <button className='btn btn-success' onClick={SignOutHandler}>SignOut</button>
+           <button className='btn btn-outline-primary' onClick={SignOutHandler}>SignOut</button>
            :
            <CustomLink to='/login'>Login</CustomLink>
         }

@@ -1,10 +1,9 @@
 .single-service img{
-    height: 350px;
-    width: 350px;
+    height: 320px;
+    width: 320px;
     border-radius: 10px;
 }
 .single-service{
-    border: 2px solid grey;
     border-radius: 15px;
 
 }
