@@ -11,7 +11,7 @@ const Header = () => {
         signOut(auth);
     }
     return (
-   <nav className='header-style d-flex justify-content-around'>
+   <nav className='header-style d-flex justify-content-around sticky-top'>
        <CustomLink to='/'>Home</CustomLink>
        <CustomLink to='/checkout'>CheckOut</CustomLink>
        <CustomLink to='/blogs'>Blogs</CustomLink>

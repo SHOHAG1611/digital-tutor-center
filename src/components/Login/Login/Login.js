@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
-import googleLogo from '../../img/google/google.png'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Google from '../Google/Google';
 
 const Login = () => {
     const emailUseRef = useRef('');
@@ -46,21 +46,7 @@ const Login = () => {
                 <br />
                 <p>create a acount <Link to='/register' onClick={goingToRegister} className='text-danger pe-auto text-decoration-none' >Please Register</Link></p>
                 <input className='btn btn-primary mt-2 mx-auto w-100 rounded-pill' type="submit" value="Login" />
-                <div className='another-option text-white'>
-                    <div>
-                        <p>_________________</p>
-                    </div>
-                    <div>
-                        <p className='mt-2 mx-2'>Or</p>
-                    </div>
-                    <div>
-
-                        <p>_________________</p>
-                    </div>
-                </div>
-                <button className='btn btn-success mt-2 mx-auto w-100 rounded-pill'>
-                    <img src={googleLogo} alt="" />
-                    login with google </button>
+                <Google></Google>
             </form>
         </div>
     );

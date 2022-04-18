@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import googleLogo from '../../../img/google/google.png'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import './Register.css'
+import Google from '../../Google/Google';
 
 const Register = () => {
     const [
@@ -46,21 +46,8 @@ const Register = () => {
                 <input className='form-input' type="password" name="password" id="" placeholder='Password' />
                 <br />
                 <p>already have a acount? <Link to='/login' onClick={goingToLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link></p>
-                <input type="submit" value="Register" />
-                <div className='another-option text-white'>
-                    <div>
-                        <p>_________________</p>
-                    </div>
-                    <div>
-                        <p className='mt-2 mx-2'>Or</p>
-                    </div>
-                    <div>
-                        <p>_________________</p>
-                    </div>
-                </div>
-                <button className='btn btn-success mt-2 mx-auto w-100 rounded-pill'>
-                    <img src={googleLogo} alt="" />
-                    Register with google </button>
+                <input  className='btn btn-primary mt-2 mx-auto w-100 rounded-pill' type="submit" value="Register" />
+                <Google></Google>
             </form>
         </div>
     );
